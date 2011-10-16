@@ -1,0 +1,3 @@
+[submodule "MDSpreadViewDemo/MDSpreadView"]
+	path = MDSpreadViewDemo/MDSpreadView
+	url = git@github.com:mochidev/MDSpreadView.git
