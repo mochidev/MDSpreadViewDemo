@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MDSpreadViewClasses.h"
 
-@interface MDViewController : UIViewController
+@interface MDViewController : UIViewController <MDSpreadViewDataSource, MDSpreadViewDelegate> {
+    MDSpreadView *spreadView;
+}
+@property (retain, nonatomic) IBOutlet MDSpreadView *spreadView;
 
 @end
