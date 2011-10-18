@@ -114,7 +114,7 @@
         cell = [[[MDSpreadViewHeaderCell alloc] initWithStyle:MDSpreadViewHeaderCellStyleCorner reuseIdentifier:cellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Corner Header %d-%d", columnSection+1, rowSection+1];
+    cell.textLabel.text = [NSString stringWithFormat:@"Cor %d-%d", columnSection+1, rowSection+1];
     
     return cell;
 }
@@ -142,7 +142,7 @@
         cell = [[[MDSpreadViewHeaderCell alloc] initWithStyle:MDSpreadViewHeaderCellStyleColumn reuseIdentifier:cellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Column Header %d (%d-%d)", section+1, rowPath.section+1, rowPath.row+1];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d (%d-%d)", section+1, rowPath.section+1, rowPath.row+1];
     
     return cell;
 }
