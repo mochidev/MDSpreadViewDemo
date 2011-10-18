@@ -78,7 +78,7 @@
 
 - (NSInteger)spreadView:(MDSpreadView *)aSpreadView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 30;
 }
 
 - (NSInteger)numberOfColumnSectionsInSpreadView:(MDSpreadView *)aSpreadView

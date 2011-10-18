@@ -47,6 +47,7 @@
 		65D846EF144AC2F4005603DD /* MDSpreadViewColumnSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846EE144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.m */; };
 		65D846F2144AC305005603DD /* MDSpreadViewColumnDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F1144AC304005603DD /* MDSpreadViewColumnDescriptor.m */; };
 		65D846F5144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F4144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m */; };
+		65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,8 @@
 		65D846F1144AC304005603DD /* MDSpreadViewColumnDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewColumnDescriptor.m; sourceTree = "<group>"; };
 		65D846F3144AC311005603DD /* MDSpreadViewRowSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewRowSectionDescriptor.h; sourceTree = "<group>"; };
 		65D846F4144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewRowSectionDescriptor.m; sourceTree = "<group>"; };
+		65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewDescriptor.h; sourceTree = "<group>"; };
+		65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewDescriptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */,
 				65D8467A144A86DC005603DD /* MDSpreadView.h */,
 				65D8467B144A86DC005603DD /* MDSpreadView.m */,
+				65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */,
+				65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */,
 				65D846ED144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.h */,
 				65D846EE144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.m */,
 				65D846F0144AC304005603DD /* MDSpreadViewColumnDescriptor.h */,
@@ -350,6 +355,7 @@
 				65D846EF144AC2F4005603DD /* MDSpreadViewColumnSectionDescriptor.m in Sources */,
 				65D846F2144AC305005603DD /* MDSpreadViewColumnDescriptor.m in Sources */,
 				65D846F5144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m in Sources */,
+				65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
