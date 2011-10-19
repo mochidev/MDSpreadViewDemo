@@ -47,8 +47,15 @@ Then, implement the datasource and delegate methods demonstrated in `MDViewContr
 Notes
 -----
 
- - An MDSpreadViewCell is created just like a UITableViewCell is -- try to dequeue it from the spread view, otherwise create an autoreleased copy, then configure and return.
- - The table headers are also made of cells, and are loaded just like UITableViewCells are.
+ - An MDSpreadViewCell is created just like a UITableViewCell is -- try to 
+ dequeue it from the spread view, otherwise create an autoreleased copy, then 
+ configure and return.
+ - The table headers are also made of cells, and are loaded just like 
+ UITableViewCells are.
+ - Works flawlessly with ~10000 cells on iPad 2/iPhone 4S, but you should use a 
+ sane amount for older devices.
+ - The bigger the cells, the faster it scrolls, since less are onscreen at a 
+ time.
 
 To Do
 ----
