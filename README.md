@@ -1,6 +1,8 @@
 MDSpreadView Demo
 =================
 
+![Screenshot](https://github.com/mochidev/MDSpreadViewDemo/raw/master/Artwork/Screenshot.png)
+
 Purpose
 -------
 
@@ -40,7 +42,19 @@ wish to use MDSpreadView in, and set the `delegate` and `datasource` properties
 of your `MDSpreadView` instance to one of your objects, much like you would do 
 for a `UITableView`.
 
-Then, implement the datasource and delegate methods demonstrated in `MDViewController.m`
+Then, implement the datasource and delegate methods demonstrated in `MDViewController.m`.
+
+Notes
+-----
+
+ - An MDSpreadViewCell is created just like a UITableViewCell is -- try to dequeue it from the spread view, otherwise create an autoreleased copy, then configure and return.
+ - The table headers are also made of cells, and are loaded just like UITableViewCells are.
+
+To Do
+----
+
+ - Row selection
+ - Column sorting
 
 Coding Style Guidelines
 -----------------------
