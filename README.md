@@ -4,24 +4,29 @@ MDSpreadView Demo
 Purpose
 -------
 
-MDSectionedTableView is a rewrite of `UIKit`'s `UITableView` for Mac OS X. This
-repository serves to demonstrate and test the MDSectionedTableView class. Please
-visit the [MDSectionedTableView](https://github.com/mochidev/MDSectionedTableView)
-repository for the actual code :)
+MDSpreadView is a rewrite of `UIKit`'s `UITableView` that allows for the display 
+of columns and column headers as well as rows. This repository serves to 
+demonstrate and test the MDSectionedTableView class. Please visit the
+[MDSpreadView](https://github.com/mochidev/MDSpreadView) repository for the 
+actual code :)
 
 Installation
 ------------
 
-    $ git clone https://github.com/mochidev/MDSectionedTableViewDemo
-    $ git submodule init
-    $ git submodule update
+```bash
+$ git clone https://github.com/mochidev/MDSpreadViewDemo
+$ git submodule init
+$ git submodule update
+```
 
 To include it into your projects either download the
-[source](https://github.com/mochidev/MDSectionedTableView), or run the following
+[source](https://github.com/mochidev/MDSpreadView), or run the following
 on your git repo:
 
-    $ cd <your_repo>
-    $ git submodule add git@github.com:mochidev/MDSectionedTableView.git <local_subpath>
+```bash
+$ cd <your_repo>
+$ git submodule add git@github.com:mochidev/MDSpreadView.git <local_subpath>/MDSpreadView
+```
 
 This will allow you to update it at anytime by running `$ git submodule update`.
 
@@ -29,9 +34,13 @@ Usage
 -----
 
 Simply add the
-[MDSectionedTableView](https://github.com/mochidev/MDSectionedTableView) submodule to
-your project, create a custom view in Interface Builder, and emped it into a `NSScrollView`.
+[MDSpreadView](https://github.com/mochidev/MDSpreadView) submodule to
+your project, add `#import "MDSpreadViewClasses.h"` to the top of the files you 
+wish to use MDSpreadView in, and set the `delegate` and `datasource` properties 
+of your `MDSpreadView` instance to one of your objects, much like you would do 
+for a `UITableView`.
 
+Then, implement the datasource and delegate methods demonstrated in `MDViewController.m`
 
 Coding Style Guidelines
 -----------------------
