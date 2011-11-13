@@ -55,12 +55,13 @@ Notes
  - Works flawlessly with ~10000 cells on iPad 2/iPhone 4S, but you should use a 
  sane amount for older devices.
  - The bigger the cells, the faster it scrolls, since less are onscreen at a 
- time.
+ time (especially on older hardware)
 
 To Do
 ----
 
  - Row selection
+ - Custom cell sizes
  - Column sorting
 
 Coding Style Guidelines

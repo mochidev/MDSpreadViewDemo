@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6553F9CC146E1C3600BAE988 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6553F9CB146E1C3500BAE988 /* QuartzCore.framework */; };
+		6553F9D0146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */; };
+		6553F9D3146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */; };
+		6553F9D6146E1EAF00BAE988 /* MDSpreadViewCellDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */; };
 		658BFE1F144E12AF00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1B144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png */; };
 		658BFE20144E12AF00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1C144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png */; };
 		658BFE21144E12AF00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1D144E12AE00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png */; };
@@ -60,13 +64,17 @@
 		65D846CA144AB922005603DD /* MDSpreadViewCellRowHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846C9144AB921005603DD /* MDSpreadViewCellRowHeaderBackground.m */; };
 		65D846CD144ABABC005603DD /* MDSpreadViewCellColumnHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846CC144ABABB005603DD /* MDSpreadViewCellColumnHeaderBackground.m */; };
 		65D846D0144ABAD4005603DD /* MDSpreadViewCellCornerHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846CF144ABAD3005603DD /* MDSpreadViewCellCornerHeaderBackground.m */; };
-		65D846EF144AC2F4005603DD /* MDSpreadViewColumnSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846EE144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.m */; };
-		65D846F2144AC305005603DD /* MDSpreadViewColumnDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F1144AC304005603DD /* MDSpreadViewColumnDescriptor.m */; };
-		65D846F5144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F4144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m */; };
 		65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6553F9CB146E1C3500BAE988 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6553F9CE146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewAxisDescriptor.h; sourceTree = "<group>"; };
+		6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewAxisDescriptor.m; sourceTree = "<group>"; };
+		6553F9D1146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewSectionDescriptor.h; sourceTree = "<group>"; };
+		6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewSectionDescriptor.m; sourceTree = "<group>"; };
+		6553F9D4146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCellDescriptor.h; sourceTree = "<group>"; };
+		6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCellDescriptor.m; sourceTree = "<group>"; };
 		658BFE1B144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewColumnHeaderLeftSelected.png; sourceTree = "<group>"; };
 		658BFE1C144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewColumnHeaderLeftSelected@2x.png"; sourceTree = "<group>"; };
 		658BFE1D144E12AE00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewColumnHeaderRightSelected.png; sourceTree = "<group>"; };
@@ -135,12 +143,6 @@
 		65D846CE144ABAD2005603DD /* MDSpreadViewCellCornerHeaderBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCellCornerHeaderBackground.h; sourceTree = "<group>"; };
 		65D846CF144ABAD3005603DD /* MDSpreadViewCellCornerHeaderBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCellCornerHeaderBackground.m; sourceTree = "<group>"; };
 		65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewClasses.h; sourceTree = "<group>"; };
-		65D846ED144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewColumnSectionDescriptor.h; sourceTree = "<group>"; };
-		65D846EE144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewColumnSectionDescriptor.m; sourceTree = "<group>"; };
-		65D846F0144AC304005603DD /* MDSpreadViewColumnDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewColumnDescriptor.h; sourceTree = "<group>"; };
-		65D846F1144AC304005603DD /* MDSpreadViewColumnDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewColumnDescriptor.m; sourceTree = "<group>"; };
-		65D846F3144AC311005603DD /* MDSpreadViewRowSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewRowSectionDescriptor.h; sourceTree = "<group>"; };
-		65D846F4144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewRowSectionDescriptor.m; sourceTree = "<group>"; };
 		65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewDescriptor.h; sourceTree = "<group>"; };
 		65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewDescriptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6553F9CC146E1C3600BAE988 /* QuartzCore.framework in Frameworks */,
 				65D8464A144A82A5005603DD /* UIKit.framework in Frameworks */,
 				65D8464C144A82A5005603DD /* Foundation.framework in Frameworks */,
 				65D8464E144A82A5005603DD /* CoreGraphics.framework in Frameworks */,
@@ -180,6 +183,7 @@
 		65D84648144A82A5005603DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6553F9CB146E1C3500BAE988 /* QuartzCore.framework */,
 				65D84649144A82A5005603DD /* UIKit.framework */,
 				65D8464B144A82A5005603DD /* Foundation.framework */,
 				65D8464D144A82A5005603DD /* CoreGraphics.framework */,
@@ -230,12 +234,12 @@
 				65D8467B144A86DC005603DD /* MDSpreadView.m */,
 				65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */,
 				65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */,
-				65D846ED144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.h */,
-				65D846EE144AC2F3005603DD /* MDSpreadViewColumnSectionDescriptor.m */,
-				65D846F0144AC304005603DD /* MDSpreadViewColumnDescriptor.h */,
-				65D846F1144AC304005603DD /* MDSpreadViewColumnDescriptor.m */,
-				65D846F3144AC311005603DD /* MDSpreadViewRowSectionDescriptor.h */,
-				65D846F4144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m */,
+				6553F9CE146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.h */,
+				6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */,
+				6553F9D1146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.h */,
+				6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */,
+				6553F9D4146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.h */,
+				6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */,
 				65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */,
 				65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */,
 				65D846D2144AC0DB005603DD /* Cells */,
@@ -416,10 +420,10 @@
 				65D846CA144AB922005603DD /* MDSpreadViewCellRowHeaderBackground.m in Sources */,
 				65D846CD144ABABC005603DD /* MDSpreadViewCellColumnHeaderBackground.m in Sources */,
 				65D846D0144ABAD4005603DD /* MDSpreadViewCellCornerHeaderBackground.m in Sources */,
-				65D846EF144AC2F4005603DD /* MDSpreadViewColumnSectionDescriptor.m in Sources */,
-				65D846F2144AC305005603DD /* MDSpreadViewColumnDescriptor.m in Sources */,
-				65D846F5144AC312005603DD /* MDSpreadViewRowSectionDescriptor.m in Sources */,
 				65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */,
+				6553F9D0146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m in Sources */,
+				6553F9D3146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m in Sources */,
+				6553F9D6146E1EAF00BAE988 /* MDSpreadViewCellDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
