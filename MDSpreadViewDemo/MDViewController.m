@@ -113,6 +113,33 @@
     return 10;
 }
 
+#pragma mark Heights
+// Comment these out to use normal values (see MDSpreadView.h)
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 25+indexPath.row;
+}
+
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowHeaderInSection:(NSInteger)rowSection
+{
+//    if (rowSection == 2) return 0; // uncomment to hide this header!
+    
+    return 22+rowSection*10;
+}
+
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 220+indexPath.row*50;
+}
+
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnHeaderInSection:(NSInteger)columnSection
+{
+//    if (columnSection == 2) return 0; // uncomment to hide this header!
+    
+    return 110+columnSection*50;
+}
+
+#pragma Cells
 - (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForRowAtIndexPath:(NSIndexPath *)rowPath forColumnAtIndexPath:(NSIndexPath *)columnPath
 {
     static NSString *cellIdentifier = @"Cell";
