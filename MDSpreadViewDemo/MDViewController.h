@@ -3,7 +3,7 @@
 //  MDSpreadViewDemo
 //
 //  Created by Dimitri Bouniol on 10/15/11.
-//  Copyright (c) 2011 Mochi Development, Inc. All rights reserved.
+//  Copyright (c) 2012 Mochi Development, Inc. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

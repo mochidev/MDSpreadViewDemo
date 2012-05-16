@@ -72,7 +72,7 @@ Please see http://webkit.org/coding/coding-style.html
 License
 -------
 
-Copyright (c) 2011 Dimitri Bouniol, Mochi Development, Inc.
+Copyright (c) 2012 Dimitri Bouniol, Mochi Development, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

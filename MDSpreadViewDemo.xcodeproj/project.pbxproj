@@ -335,7 +335,7 @@
 		65D8463C144A82A5005603DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Mochi Development, Inc.";
 			};
 			buildConfigurationList = 65D8463F144A82A5005603DD /* Build configuration list for PBXProject "MDSpreadViewDemo" */;
@@ -508,6 +508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MDSpreadViewDemo/MDSpreadViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "MDSpreadViewDemo/MDSpreadViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -519,6 +520,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MDSpreadViewDemo/MDSpreadViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "MDSpreadViewDemo/MDSpreadViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
