@@ -6,14 +6,17 @@
 //  Copyright (c) 2012 Mochi Development, Inc. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
+//  of this software, associated artwork, and documentation files (the "Software"),
+//  to deal in the Software without restriction, including without limitation the
+//  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+//  sell copies of the Software, and to permit persons to whom the Software is
 //  furnished to do so, subject to the following conditions:
 //  
-//  The above copyright notice and this permission notice shall be included in
-//  all copies or substantial portions of the Software.
+//  1. The above copyright notice and this permission notice shall be included in
+//     all copies or substantial portions of the Software.
+//  2. Neither the name of Mochi Development, Inc. nor the names of its
+//     contributors or products may be used to endorse or promote products
+//     derived from this software without specific prior written permission.
 //  
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -36,6 +39,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    NSLog(@"Too little memory!");
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -95,27 +100,27 @@
 
 - (NSInteger)spreadView:(MDSpreadView *)aSpreadView numberOfColumnsInSection:(NSInteger)section
 {
-    return 3;
+    return 50;
 }
 
 - (NSInteger)spreadView:(MDSpreadView *)aSpreadView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return 50;
 }
 
 - (NSInteger)numberOfColumnSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 4;
+    return 1000;
 }
 
 - (NSInteger)numberOfRowSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 10;
+    return 1000;
 }
 
 #pragma mark Heights
 // Comment these out to use normal values (see MDSpreadView.h)
-- (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowAtIndexPath:(MDIndexPath *)indexPath
 {
     return 25+indexPath.row;
 }
@@ -123,24 +128,22 @@
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowHeaderInSection:(NSInteger)rowSection
 {
 //    if (rowSection == 2) return 0; // uncomment to hide this header!
-    
-    return 22+rowSection*10;
+    return 22+rowSection;
 }
 
-- (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnAtIndexPath:(MDIndexPath *)indexPath
 {
-    return 220+indexPath.row*50;
+    return 220+indexPath.column*5;
 }
 
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnHeaderInSection:(NSInteger)columnSection
 {
 //    if (columnSection == 2) return 0; // uncomment to hide this header!
-    
-    return 110+columnSection*50;
+    return 110+columnSection*5;
 }
 
 #pragma Cells
-- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForRowAtIndexPath:(NSIndexPath *)rowPath forColumnAtIndexPath:(NSIndexPath *)columnPath
+- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForRowAtIndexPath:(MDIndexPath *)rowPath forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
     static NSString *cellIdentifier = @"Cell";
 
@@ -168,7 +171,7 @@
     return cell;
 }
 
-- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForHeaderInRowSection:(NSInteger)section forColumnAtIndexPath:(NSIndexPath *)columnPath
+- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForHeaderInRowSection:(NSInteger)section forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
     static NSString *cellIdentifier = @"RowHeaderCell";
     
@@ -182,7 +185,7 @@
     return cell;
 }
 
-- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForHeaderInColumnSection:(NSInteger)section forRowAtIndexPath:(NSIndexPath *)rowPath
+- (MDSpreadViewCell *)spreadView:(MDSpreadView *)aSpreadView cellForHeaderInColumnSection:(NSInteger)section forRowAtIndexPath:(MDIndexPath *)rowPath
 {
     static NSString *cellIdentifier = @"ColumnHeaderCell";
     
@@ -194,6 +197,26 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%d (%d-%d)", section+1, rowPath.section+1, rowPath.row+1];
     
     return cell;
+}
+
+- (IBAction)scrollToTop:(id)sender
+{
+    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentOffset.x, 0, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+}
+
+- (IBAction)scrollToBottom:(id)sender
+{
+    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentOffset.x, spreadView.contentSize.height-spreadView.bounds.size.height, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+}
+
+- (IBAction)scrollToLeft:(id)sender
+{
+    [spreadView scrollRectToVisible:CGRectMake(0, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+}
+
+- (IBAction)scrollToRight:(id)sender
+{
+    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentSize.width-spreadView.bounds.size.width, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
 }
 
 @end

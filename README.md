@@ -47,15 +47,17 @@ Then, implement the datasource and delegate methods demonstrated in `MDViewContr
 Notes
 -----
 
- - An MDSpreadViewCell is created just like a UITableViewCell is -- try to 
+ - An `MDSpreadViewCell` is created just like a `UITableViewCell` is -- try to 
  dequeue it from the spread view, otherwise create an autoreleased copy, then 
  configure and return.
  - The table headers are also made of cells, and are loaded just like 
  UITableViewCells are.
- - Works flawlessly with ~10000 cells on iPad 2/iPhone 4S, but you should use a 
- sane amount for older devices.
+ - Works flawlessly with ~2.5 billion cells on iPad 3/iPhone 4S, but you might want
+ to modify the demo accordingly for your testing.
  - The bigger the cells, the faster it scrolls, since less are onscreen at a 
  time (especially on older hardware)
+ - `MDSpreadView` uses `MDIndexPath`s *instead* of `NSIndexPath` to index cells.
+ - Not all API's are fully implemented yet, and are there for future features only.
 
 To Do
 ----
@@ -67,7 +69,7 @@ To Do
 Coding Style Guidelines
 -----------------------
 
-Please see http://webkit.org/coding/coding-style.html
+Please see https://mochidev.com/codestyle
 
 License
 -------
@@ -75,14 +77,17 @@ License
 Copyright (c) 2012 Dimitri Bouniol, Mochi Development, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
+of this software, associated artwork, and documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+2. Neither the name of Mochi Development, Inc. nor the names of its
+ contributors or products may be used to endorse or promote products
+ derived from this software without specific prior written permission.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

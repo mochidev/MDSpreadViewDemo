@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6553F9CC146E1C3600BAE988 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6553F9CB146E1C3500BAE988 /* QuartzCore.framework */; };
-		6553F9D0146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */; };
-		6553F9D3146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */; };
-		6553F9D6146E1EAF00BAE988 /* MDSpreadViewCellDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */; };
 		658BFE1F144E12AF00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1B144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png */; };
 		658BFE20144E12AF00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1C144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png */; };
 		658BFE21144E12AF00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE1D144E12AE00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png */; };
@@ -64,17 +61,10 @@
 		65D846CA144AB922005603DD /* MDSpreadViewCellRowHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846C9144AB921005603DD /* MDSpreadViewCellRowHeaderBackground.m */; };
 		65D846CD144ABABC005603DD /* MDSpreadViewCellColumnHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846CC144ABABB005603DD /* MDSpreadViewCellColumnHeaderBackground.m */; };
 		65D846D0144ABAD4005603DD /* MDSpreadViewCellCornerHeaderBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846CF144ABAD3005603DD /* MDSpreadViewCellCornerHeaderBackground.m */; };
-		65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6553F9CB146E1C3500BAE988 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		6553F9CE146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewAxisDescriptor.h; sourceTree = "<group>"; };
-		6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewAxisDescriptor.m; sourceTree = "<group>"; };
-		6553F9D1146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewSectionDescriptor.h; sourceTree = "<group>"; };
-		6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewSectionDescriptor.m; sourceTree = "<group>"; };
-		6553F9D4146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCellDescriptor.h; sourceTree = "<group>"; };
-		6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCellDescriptor.m; sourceTree = "<group>"; };
 		658BFE1B144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewColumnHeaderLeftSelected.png; sourceTree = "<group>"; };
 		658BFE1C144E12AE00F9A434 /* MDSpreadViewColumnHeaderLeftSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewColumnHeaderLeftSelected@2x.png"; sourceTree = "<group>"; };
 		658BFE1D144E12AE00F9A434 /* MDSpreadViewColumnHeaderRightSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewColumnHeaderRightSelected.png; sourceTree = "<group>"; };
@@ -102,12 +92,12 @@
 		65D84658144A82A5005603DD /* MDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDAppDelegate.h; sourceTree = "<group>"; };
 		65D84659144A82A5005603DD /* MDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDAppDelegate.m; sourceTree = "<group>"; };
 		65D8465B144A82A5005603DD /* MDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDViewController.h; sourceTree = "<group>"; };
-		65D8465C144A82A5005603DD /* MDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDViewController.m; sourceTree = "<group>"; };
+		65D8465C144A82A5005603DD /* MDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MDViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		65D8465F144A82A5005603DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDViewController_iPhone.xib; sourceTree = "<group>"; };
 		65D84662144A82A5005603DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MDViewController_iPad.xib; sourceTree = "<group>"; };
 		65D84669144A8392005603DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		65D8467A144A86DC005603DD /* MDSpreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadView.h; sourceTree = "<group>"; };
-		65D8467B144A86DC005603DD /* MDSpreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadView.m; sourceTree = "<group>"; };
+		65D8467A144A86DC005603DD /* MDSpreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MDSpreadView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		65D8467B144A86DC005603DD /* MDSpreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MDSpreadView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		65D84684144A87F1005603DD /* MDSpreadViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewCell.png; sourceTree = "<group>"; };
 		65D84685144A87F1005603DD /* MDSpreadViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewCell@2x.png"; sourceTree = "<group>"; };
 		65D84686144A87F1005603DD /* MDSpreadViewCellSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewCellSelected.png; sourceTree = "<group>"; };
@@ -128,7 +118,7 @@
 		65D84695144A87F1005603DD /* MDSpreadViewRowHeaderBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewRowHeaderBottom@2x.png"; sourceTree = "<group>"; };
 		65D84696144A87F1005603DD /* MDSpreadViewRowHeaderTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewRowHeaderTop.png; sourceTree = "<group>"; };
 		65D84697144A87F1005603DD /* MDSpreadViewRowHeaderTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewRowHeaderTop@2x.png"; sourceTree = "<group>"; };
-		65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+MDSpreadView.h"; sourceTree = "<group>"; };
+		65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSIndexPath+MDSpreadView.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+MDSpreadView.m"; sourceTree = "<group>"; };
 		65D846BB144AA835005603DD /* MDSpreadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCell.h; sourceTree = "<group>"; };
 		65D846BC144AA835005603DD /* MDSpreadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCell.m; sourceTree = "<group>"; };
@@ -142,9 +132,7 @@
 		65D846CC144ABABB005603DD /* MDSpreadViewCellColumnHeaderBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCellColumnHeaderBackground.m; sourceTree = "<group>"; };
 		65D846CE144ABAD2005603DD /* MDSpreadViewCellCornerHeaderBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCellCornerHeaderBackground.h; sourceTree = "<group>"; };
 		65D846CF144ABAD3005603DD /* MDSpreadViewCellCornerHeaderBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCellCornerHeaderBackground.m; sourceTree = "<group>"; };
-		65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewClasses.h; sourceTree = "<group>"; };
-		65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewDescriptor.h; sourceTree = "<group>"; };
-		65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewDescriptor.m; sourceTree = "<group>"; };
+		65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MDSpreadViewClasses.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,14 +220,6 @@
 				65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */,
 				65D8467A144A86DC005603DD /* MDSpreadView.h */,
 				65D8467B144A86DC005603DD /* MDSpreadView.m */,
-				65D846F6144AD67C005603DD /* MDSpreadViewDescriptor.h */,
-				65D846F7144AD67F005603DD /* MDSpreadViewDescriptor.m */,
-				6553F9CE146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.h */,
-				6553F9CF146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m */,
-				6553F9D1146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.h */,
-				6553F9D2146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m */,
-				6553F9D4146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.h */,
-				6553F9D5146E1EAE00BAE988 /* MDSpreadViewCellDescriptor.m */,
 				65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */,
 				65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */,
 				65D846D2144AC0DB005603DD /* Cells */,
@@ -335,7 +315,7 @@
 		65D8463C144A82A5005603DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Mochi Development, Inc.";
 			};
 			buildConfigurationList = 65D8463F144A82A5005603DD /* Build configuration list for PBXProject "MDSpreadViewDemo" */;
@@ -420,10 +400,6 @@
 				65D846CA144AB922005603DD /* MDSpreadViewCellRowHeaderBackground.m in Sources */,
 				65D846CD144ABABC005603DD /* MDSpreadViewCellColumnHeaderBackground.m in Sources */,
 				65D846D0144ABAD4005603DD /* MDSpreadViewCellCornerHeaderBackground.m in Sources */,
-				65D846F8144AD681005603DD /* MDSpreadViewDescriptor.m in Sources */,
-				6553F9D0146E1DC300BAE988 /* MDSpreadViewAxisDescriptor.m in Sources */,
-				6553F9D3146E1E9F00BAE988 /* MDSpreadViewSectionDescriptor.m in Sources */,
-				6553F9D6146E1EAF00BAE988 /* MDSpreadViewCellDescriptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +452,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -494,7 +470,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
