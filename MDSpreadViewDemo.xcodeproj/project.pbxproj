@@ -54,7 +54,6 @@
 		65D846A9144A87F1005603DD /* MDSpreadViewRowHeaderBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D84695144A87F1005603DD /* MDSpreadViewRowHeaderBottom@2x.png */; };
 		65D846AA144A87F1005603DD /* MDSpreadViewRowHeaderTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D84696144A87F1005603DD /* MDSpreadViewRowHeaderTop.png */; };
 		65D846AB144A87F1005603DD /* MDSpreadViewRowHeaderTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D84697144A87F1005603DD /* MDSpreadViewRowHeaderTop@2x.png */; };
-		65D846B6144A8CBF005603DD /* NSIndexPath+MDSpreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */; };
 		65D846BD144AA836005603DD /* MDSpreadViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846BC144AA835005603DD /* MDSpreadViewCell.m */; };
 		65D846C0144AA9F7005603DD /* MDSpreadViewHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846BF144AA9F7005603DD /* MDSpreadViewHeaderCell.m */; };
 		65D846C7144AB887005603DD /* MDSpreadViewCellBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D846C6144AB884005603DD /* MDSpreadViewCellBackground.m */; };
@@ -118,8 +117,6 @@
 		65D84695144A87F1005603DD /* MDSpreadViewRowHeaderBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewRowHeaderBottom@2x.png"; sourceTree = "<group>"; };
 		65D84696144A87F1005603DD /* MDSpreadViewRowHeaderTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewRowHeaderTop.png; sourceTree = "<group>"; };
 		65D84697144A87F1005603DD /* MDSpreadViewRowHeaderTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewRowHeaderTop@2x.png"; sourceTree = "<group>"; };
-		65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "NSIndexPath+MDSpreadView.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+MDSpreadView.m"; sourceTree = "<group>"; };
 		65D846BB144AA835005603DD /* MDSpreadViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewCell.h; sourceTree = "<group>"; };
 		65D846BC144AA835005603DD /* MDSpreadViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSpreadViewCell.m; sourceTree = "<group>"; };
 		65D846BE144AA9F7005603DD /* MDSpreadViewHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSpreadViewHeaderCell.h; sourceTree = "<group>"; };
@@ -220,8 +217,6 @@
 				65D846D1144AC00B005603DD /* MDSpreadViewClasses.h */,
 				65D8467A144A86DC005603DD /* MDSpreadView.h */,
 				65D8467B144A86DC005603DD /* MDSpreadView.m */,
-				65D846B4144A8CBF005603DD /* NSIndexPath+MDSpreadView.h */,
-				65D846B5144A8CBF005603DD /* NSIndexPath+MDSpreadView.m */,
 				65D846D2144AC0DB005603DD /* Cells */,
 			);
 			path = Classes;
@@ -393,7 +388,6 @@
 				65D8465A144A82A5005603DD /* MDAppDelegate.m in Sources */,
 				65D8465D144A82A5005603DD /* MDViewController.m in Sources */,
 				65D8467E144A86DC005603DD /* MDSpreadView.m in Sources */,
-				65D846B6144A8CBF005603DD /* NSIndexPath+MDSpreadView.m in Sources */,
 				65D846BD144AA836005603DD /* MDSpreadViewCell.m in Sources */,
 				65D846C0144AA9F7005603DD /* MDSpreadViewHeaderCell.m in Sources */,
 				65D846C7144AB887005603DD /* MDSpreadViewCellBackground.m in Sources */,
