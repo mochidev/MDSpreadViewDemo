@@ -38,7 +38,7 @@ Usage
 Simply add the
 [MDSpreadView](https://github.com/mochidev/MDSpreadView) submodule to
 your project, add `#import "MDSpreadViewClasses.h"` to the top of the files you 
-wish to use MDSpreadView in, and set the `delegate` and `datasource` properties 
+wish to use MDSpreadView in, and set the `delegate` and `dataSource` properties 
 of your `MDSpreadView` instance to one of your objects, much like you would do 
 for a `UITableView`.
 
@@ -51,20 +51,27 @@ Notes
  dequeue it from the spread view, otherwise create an autoreleased copy, then 
  configure and return.
  - The table headers are also made of cells, and are loaded just like 
- UITableViewCells are.
+ MDTableViewCells are.
  - Works flawlessly with ~2.5 billion cells on iPad 3/iPhone 4S, but you might want
  to modify the demo accordingly for your testing.
  - The bigger the cells, the faster it scrolls, since less are onscreen at a 
  time (especially on older hardware)
  - `MDSpreadView` uses `MDIndexPath`s *instead* of `NSIndexPath` to index cells.
- - Not all API's are fully implemented yet, and are there for future features only.
+ - Not all API's are fully implemented yet, and are there for future reference only.
+ - `MDSpreadView` also offers an easier way to make cells via `- spreadView:title...`
+ and `- spreadView:objectValue...` datasource methods. The cell classes used can be
+ changed via the `default...CellClass` quartet of properties.
+ - Unlike UITableView, MDSpreadView is not adversely affected by custom cell sizes.
 
 To Do
-----
+-----
 
  - Row selection
- - Custom cell sizes
  - Column sorting
+ - Better random access
+ - Programatic scrolling
+ - Info Querying
+ - Copy-Paste menu support
 
 Coding Style Guidelines
 -----------------------

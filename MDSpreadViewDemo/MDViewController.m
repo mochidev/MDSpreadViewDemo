@@ -224,6 +224,9 @@
     return [NSString stringWithFormat:@"A Test Row %d-%d (%d-%d)", rowPath.section+1, rowPath.row+1, columnPath.section+1, columnPath.row+1];
 }
 
+#pragma mark - Debug stuff
+// not actually part of MDSpreadView!
+
 - (IBAction)scrollToTop:(id)sender
 {
     [spreadView scrollRectToVisible:CGRectMake(spreadView.contentOffset.x, 0, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
