@@ -111,4 +111,5 @@ Also, it'd be super awesome if you credited this page in your about screen :)
 Credits
 -------
 
-Created by [Dimitri Bouniol](http://twitter.com/dimitribouniol) for [Mochi Development, Inc.](http://mochidev.com/)
+- Created by [Dimitri Bouniol](http://twitter.com/dimitribouniol) for [Mochi Development, Inc.](http://mochidev.com/)
+- Contributed to by [Sonny Fazio](https://github.com/sonnyfazio) of [SonsterMedia](https://sonstermedia.com)
