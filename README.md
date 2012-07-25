@@ -16,9 +16,7 @@ Installation
 ------------
 
 ```bash
-$ git clone https://github.com/mochidev/MDSpreadViewDemo
-$ git submodule init
-$ git submodule update
+$ git clone https://github.com/mochidev/MDSpreadViewDemo --recursive
 ```
 
 To include it into your projects either download the
