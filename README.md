@@ -42,6 +42,8 @@ for a `UITableView`.
 
 Then, implement the datasource and delegate methods demonstrated in `MDViewController.m`.
 
+Don't forget to add `QuartzCore.framework` to your project!
+
 Notes
 -----
 
@@ -64,9 +66,10 @@ Notes
 To Do
 -----
 
- - Row selection
+ - Persistant row selection
+ - Better header selection
+ - Better header generation
  - Column sorting
- - Better random access
  - Programatic scrolling
  - Info Querying
  - Copy-Paste menu support
