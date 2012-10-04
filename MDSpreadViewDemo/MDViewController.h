@@ -42,5 +42,6 @@
 - (IBAction)scrollToBottom:(id)sender;
 - (IBAction)scrollToLeft:(id)sender;
 - (IBAction)scrollToRight:(id)sender;
+- (IBAction)reload:(id)sender;
 
 @end

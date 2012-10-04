@@ -155,6 +155,7 @@
     }
     
     cell.textLabel.text = [NSString stringWithFormat:@"Test Row %d-%d (%d-%d)", rowPath.section+1, rowPath.row+1, columnPath.section+1, columnPath.row+1];
+    cell.textLabel.textColor = [UIColor colorWithRed:(arc4random()%100)/200. green:(arc4random()%100)/200. blue:(arc4random()%100)/200. alpha:1];
 
     return cell;
 }
@@ -256,6 +257,11 @@
 - (IBAction)scrollToRight:(id)sender
 {
     [spreadView scrollRectToVisible:CGRectMake(spreadView.contentSize.width-spreadView.bounds.size.width, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+}
+
+- (IBAction)reload:(id)sender
+{
+    [spreadView reloadData];
 }
 
 @end
