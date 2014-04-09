@@ -49,8 +49,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    spreadView.sectionColumnHeaderWidth = 0;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+        spreadView.contentInset = UIEdgeInsetsMake(64, 20, 84, 20);
+    }
+//    spreadView.contentInset = UIEdgeInsetsMake(44*3, 300, 44*3, 300);
+//    spreadView.clipsToBounds = NO;
+//    spreadView.columnWidth = spreadView.rowHeight;
     [spreadView reloadData];
-	// Do any additional setup after loading the view, typically from a nib.
+// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
@@ -105,41 +112,61 @@
 
 - (NSInteger)spreadView:(MDSpreadView *)aSpreadView numberOfRowsInSection:(NSInteger)section
 {
-    return 50;
+//    if (section == 0 || section == 2) return 0;
+    return 100;
 }
 
 - (NSInteger)numberOfColumnSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 1000;
+    return 10000;
 }
 
 - (NSInteger)numberOfRowSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 1000;
+    return 10000;
 }
 
 #pragma mark Heights
 // Comment these out to use normal values (see MDSpreadView.h)
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowAtIndexPath:(MDIndexPath *)indexPath
 {
-    return 25+indexPath.row;
+    return 25+indexPath.row; // 165 cells gives 60 fps. 250 cells gives 50 fps. 600 cells gives 25 fps
 }
-
+//
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowHeaderInSection:(NSInteger)rowSection
 {
-//    if (rowSection == 2) return 0; // uncomment to hide this header!
-    return 22+rowSection;
+//    if (rowSection == 0 || rowSection == 2) return 0; // uncomment to hide this header!
+    
+    if (rowSection == 1) return 0;
+    return 22;
+}
+
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView heightForRowFooterInSection:(NSInteger)rowSection
+{
+//    if (rowSection == 0 || rowSection == 2) return 0; // uncomment to hide this header!
+    if (rowSection <= 2) return 0;
+    return 22;
 }
 
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnAtIndexPath:(MDIndexPath *)indexPath
 {
-    return 220+indexPath.column*5;
+//    return 220+indexPath.column*5;
+    return 140+indexPath.row;
 }
 
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnHeaderInSection:(NSInteger)columnSection
 {
 //    if (columnSection == 2) return 0; // uncomment to hide this header!
-    return 110+columnSection*5;
+    if (columnSection == 1) return 0;
+    return MIN(110+columnSection*5, 230);
+//    return 22;
+}
+
+- (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnFooterInSection:(NSInteger)columnSection
+{
+    if (columnSection <= 2) return 0; // uncomment to hide this header!
+    return MIN(110+columnSection*5, 230);
+//    return 22;
 }
 
 #pragma Cells
@@ -154,7 +181,7 @@
         cell = [[[MDSpreadViewCell alloc] initWithStyle:MDSpreadViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Test Row %d-%d (%d-%d)", rowPath.section+1, rowPath.row+1, columnPath.section+1, columnPath.row+1];
+    cell.textLabel.text = [NSString stringWithFormat:@"Test Row %ld-%ld (%ld-%ld)", (long)(rowPath.section+1), (long)(rowPath.row+1), (long)(columnPath.section+1), (long)(columnPath.row+1)];
     cell.textLabel.textColor = [UIColor colorWithRed:(arc4random()%100)/200. green:(arc4random()%100)/200. blue:(arc4random()%100)/200. alpha:1];
 
     return cell;
@@ -207,22 +234,47 @@
 
 - (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInRowSection:(NSInteger)rowSection forColumnSection:(NSInteger)columnSection
 {
-    return [NSString stringWithFormat:@"Cor %d-%d", columnSection+1, rowSection+1];
+    return [NSString stringWithFormat:@"H Cor %ld-%ld", (long)(columnSection+1), (long)(rowSection+1)];
+}
+
+- (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInRowSection:(NSInteger)rowSection forColumnFooterSection:(NSInteger)columnSection
+{
+    return [NSString stringWithFormat:@"B Cor %ld-%ld", (long)(columnSection+1), (long)(rowSection+1)];
+}
+
+- (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInColumnSection:(NSInteger)columnSection forRowFooterSection:(NSInteger)rowSection
+{
+    return [NSString stringWithFormat:@"A Cor %ld-%ld", (long)(columnSection+1), (long)(rowSection+1)];
+}
+
+- (id)spreadView:(MDSpreadView *)aSpreadView titleForFooterInRowSection:(NSInteger)rowSection forColumnSection:(NSInteger)columnSection
+{
+    return [NSString stringWithFormat:@"F Cor %ld-%ld", (long)(columnSection+1), (long)(rowSection+1)];
 }
 
 - (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInRowSection:(NSInteger)section forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
-    return [NSString stringWithFormat:@"Row Header %d (%d-%d)", section+1, columnPath.section+1, columnPath.row+1];
+    return [NSString stringWithFormat:@"H Row %ld (%ld-%ld)", (long)(section+1), (long)(columnPath.section+1), (long)(columnPath.row+1)];
 }
 
 - (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInColumnSection:(NSInteger)section forRowAtIndexPath:(MDIndexPath *)rowPath
 {
-    return [NSString stringWithFormat:@"%d (%d-%d)", section+1, rowPath.section+1, rowPath.row+1];
+    return [NSString stringWithFormat:@"H Col %ld (%ld-%ld)", (long)(section+1), (long)(rowPath.section+1), (long)(rowPath.row+1)];
+}
+
+- (id)spreadView:(MDSpreadView *)aSpreadView titleForFooterInRowSection:(NSInteger)section forColumnAtIndexPath:(MDIndexPath *)columnPath
+{
+    return [NSString stringWithFormat:@"F Row %ld (%ld-%ld)", (long)(section+1), (long)(columnPath.section+1), (long)(columnPath.row+1)];
+}
+
+- (id)spreadView:(MDSpreadView *)aSpreadView titleForFooterInColumnSection:(NSInteger)section forRowAtIndexPath:(MDIndexPath *)rowPath
+{
+    return [NSString stringWithFormat:@"F Col %ld (%ld-%ld)", (long)(section+1), (long)(rowPath.section+1), (long)(rowPath.row+1)];
 }
 
 - (id)spreadView:(MDSpreadView *)aSpreadView objectValueForRowAtIndexPath:(MDIndexPath *)rowPath forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
-    return [NSString stringWithFormat:@"A Test Row %d-%d (%d-%d)", rowPath.section+1, rowPath.row+1, columnPath.section+1, columnPath.row+1];
+    return [NSString stringWithFormat:@"Cell %ld-%ld (%ld-%ld)", (long)(rowPath.section+1), (long)(rowPath.row+1), (long)(columnPath.section+1), (long)(columnPath.row+1)];
 }
 
 - (void)spreadView:(MDSpreadView *)aSpreadView didSelectCellForRowAtIndexPath:(MDIndexPath *)rowPath forColumnAtIndexPath:(MDIndexPath *)columnPath
@@ -241,22 +293,22 @@
 
 - (IBAction)scrollToTop:(id)sender
 {
-    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentOffset.x, 0, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+    [spreadView scrollRectToVisible:UIEdgeInsetsInsetRect(CGRectMake(spreadView.contentOffset.x, -spreadView.contentInset.top, spreadView.bounds.size.width, spreadView.bounds.size.height), spreadView.contentInset) animated:YES];
 }
 
 - (IBAction)scrollToBottom:(id)sender
 {
-    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentOffset.x, spreadView.contentSize.height-spreadView.bounds.size.height, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+    [spreadView scrollRectToVisible:UIEdgeInsetsInsetRect(CGRectMake(spreadView.contentOffset.x, spreadView.contentSize.height-spreadView.bounds.size.height+spreadView.contentInset.bottom, spreadView.bounds.size.width, spreadView.bounds.size.height), spreadView.contentInset) animated:YES];
 }
 
 - (IBAction)scrollToLeft:(id)sender
 {
-    [spreadView scrollRectToVisible:CGRectMake(0, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+    [spreadView scrollRectToVisible:UIEdgeInsetsInsetRect(CGRectMake(-spreadView.contentInset.left, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height), spreadView.contentInset) animated:YES];
 }
 
 - (IBAction)scrollToRight:(id)sender
 {
-    [spreadView scrollRectToVisible:CGRectMake(spreadView.contentSize.width-spreadView.bounds.size.width, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height) animated:YES];
+    [spreadView scrollRectToVisible:UIEdgeInsetsInsetRect(CGRectMake(spreadView.contentSize.width-spreadView.bounds.size.width+spreadView.contentInset.right, spreadView.contentOffset.y, spreadView.bounds.size.width, spreadView.bounds.size.height), spreadView.contentInset) animated:YES];
 }
 
 - (IBAction)reload:(id)sender

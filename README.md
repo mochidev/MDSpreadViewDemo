@@ -6,9 +6,9 @@ MDSpreadView Demo
 Purpose
 -------
 
-MDSpreadView is a rewrite of `UIKit`'s `UITableView` that allows for the display 
+`MDSpreadView` is a rewrite of `UIKit`'s `UITableView` that allows for the display
 of columns and column headers as well as rows. This repository serves to 
-demonstrate and test the MDSectionedTableView class. Please visit the
+demonstrate and test the `MDSpreadView` class. Please visit the
 [MDSpreadView](https://github.com/mochidev/MDSpreadView) repository for the 
 actual code :)
 
@@ -48,19 +48,20 @@ Notes
 -----
 
  - An `MDSpreadViewCell` is created just like a `UITableViewCell` is -- try to 
- dequeue it from the spread view, otherwise create an autoreleased copy, then 
+ dequeue it from the spread view, otherwise create a new one, then 
  configure and return.
  - The table headers are also made of cells, and are loaded just like 
  MDTableViewCells are.
- - Works flawlessly with ~2.5 billion cells on iPad 3/iPhone 4S, but you might want
- to modify the demo accordingly for your testing.
+ - Works flawlessly with ~500 billion data points (anything bigger makes `- reloadData` hang).
  - The bigger the cells, the faster it scrolls, since less are onscreen at a 
- time (especially on older hardware)
+ time (especially on older hardware).
+   - ~150 cells gives 60 fps on current hardware, though you can viably push to 600 cells for ~25 fps
  - `MDSpreadView` uses `MDIndexPath`s *instead* of `NSIndexPath` to index cells.
- - Not all API's are fully implemented yet, and are there for future reference only.
+ - Not all APIs are fully implemented yet, and are there for future reference only.
  - `MDSpreadView` also offers an easier way to make cells via `- spreadView:title...`
  and `- spreadView:objectValue...` datasource methods. The cell classes used can be
  changed via the `default...CellClass` quartet of properties.
+ - `MDSpreadView` also has support for footer columns and rows.
  - Unlike UITableView, MDSpreadView is not adversely affected by custom cell sizes.
 
 To Do
@@ -68,7 +69,6 @@ To Do
 
  - Persistant row selection
  - Better header selection
- - Better header generation
  - Column sorting
  - Programatic scrolling
  - Info Querying
@@ -82,7 +82,7 @@ Please see https://mochidev.com/codestyle
 License
 -------
 
-Copyright (c) 2012 Dimitri Bouniol, Mochi Development, Inc.
+Copyright (c) 2014 Dimitri Bouniol, Mochi Development, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software, associated artwork, and documentation files (the "Software"),
@@ -108,6 +108,8 @@ THE SOFTWARE.
 Mochi Dev, and the Mochi Development logo are copyright Mochi Development, Inc.
 
 Also, it'd be super awesome if you credited this page in your about screen :)
+
+(We do this for you in [MDAboutController](https://github.com/mochidev/MDAboutControllerDemo)!)
 
 Credits
 -------
