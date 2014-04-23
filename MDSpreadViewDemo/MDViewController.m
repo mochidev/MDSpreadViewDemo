@@ -53,6 +53,7 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         spreadView.contentInset = UIEdgeInsetsMake(64, 20, 84, 20);
     }
+    spreadView.scrollIndicatorInsets = spreadView.contentInset;
 //    spreadView.contentInset = UIEdgeInsetsMake(44*3, 300, 44*3, 300);
 //    spreadView.clipsToBounds = NO;
 //    spreadView.columnWidth = spreadView.rowHeight;
