@@ -54,6 +54,11 @@
         spreadView.contentInset = UIEdgeInsetsMake(64, 20, 84, 20);
     }
     spreadView.scrollIndicatorInsets = spreadView.contentInset;
+    
+//    spreadView.allowsRowHeaderSelection = YES;
+//    spreadView.allowsColumnHeaderSelection = YES;
+//    spreadView.allowsCornerHeaderSelection = YES;
+    
 //    spreadView.contentInset = UIEdgeInsetsMake(44*3, 300, 44*3, 300);
 //    spreadView.clipsToBounds = NO;
 //    spreadView.columnWidth = spreadView.rowHeight;
@@ -280,11 +285,16 @@
 
 - (void)spreadView:(MDSpreadView *)aSpreadView didSelectCellForRowAtIndexPath:(MDIndexPath *)rowPath forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
-    [spreadView deselectCellForRowAtIndexPath:rowPath forColumnAtIndexPath:columnPath animated:YES];
+//    [spreadView deselectCellForRowAtIndexPath:rowPath forColumnAtIndexPath:columnPath animated:YES];
     NSLog(@"Selected %@ x %@", rowPath, columnPath);
 }
 
-- (MDSpreadViewSelection *)spreadView:(MDSpreadView *)aSpreadView willSelectCellForSelection:(MDSpreadViewSelection *)selection
+- (MDSpreadViewSelection *)spreadView:(MDSpreadView *)aSpreadView willHighlightCellWithSelection:(MDSpreadViewSelection *)selection
+{
+    return [MDSpreadViewSelection selectionWithRow:selection.rowPath column:selection.columnPath mode:MDSpreadViewSelectionModeRowAndColumn];
+}
+
+- (MDSpreadViewSelection *)spreadView:(MDSpreadView *)aSpreadView willSelectCellWithSelection:(MDSpreadViewSelection *)selection
 {
     return [MDSpreadViewSelection selectionWithRow:selection.rowPath column:selection.columnPath mode:MDSpreadViewSelectionModeRowAndColumn];
 }

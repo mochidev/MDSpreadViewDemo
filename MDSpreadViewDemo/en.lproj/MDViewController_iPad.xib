@@ -99,6 +99,14 @@
                                 <action selector="reload:" destination="-1" eventType="touchUpInside" id="22"/>
                             </connections>
                         </button>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="ugP-yM-eBq">
+                            <rect key="frame" x="599" y="28" width="149" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Huge"/>
+                                <segment title="Sortable"/>
+                            </segments>
+                        </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" red="0.45647714919999999" green="0.46374300439999999" blue="0.50093670280000002" alpha="0.96999999999999997" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
