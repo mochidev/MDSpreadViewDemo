@@ -20,10 +20,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="8"/>
-                        <outlet property="delegate" destination="-1" id="9"/>
-                    </connections>
                 </view>
                 <view contentMode="scaleToFill" id="Rn3-dP-cs1">
                     <rect key="frame" x="748" y="64" width="20" height="876"/>
@@ -33,7 +29,22 @@
                 <view contentMode="scaleToFill" id="ZBI-l4-hGz">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="64"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="ugP-yM-eBq">
+                            <rect key="frame" x="265" y="28" width="238" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Huge A"/>
+                                <segment title="Huge B"/>
+                                <segment title="Sortable"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeDataSource:" destination="-1" eventType="valueChanged" id="zH4-v4-Zc6"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
                     <color key="backgroundColor" red="0.45647714919999999" green="0.46374300439999999" blue="0.50093670280000002" alpha="0.96999999999999997" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="pLN-rN-ws3">
                     <rect key="frame" x="0.0" y="64" width="20" height="876"/>
@@ -99,14 +110,6 @@
                                 <action selector="reload:" destination="-1" eventType="touchUpInside" id="22"/>
                             </connections>
                         </button>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="ugP-yM-eBq">
-                            <rect key="frame" x="599" y="28" width="149" height="29"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Huge"/>
-                                <segment title="Sortable"/>
-                            </segments>
-                        </segmentedControl>
                     </subviews>
                     <color key="backgroundColor" red="0.45647714919999999" green="0.46374300439999999" blue="0.50093670280000002" alpha="0.96999999999999997" colorSpace="calibratedRGB"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

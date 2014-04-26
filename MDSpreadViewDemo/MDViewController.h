@@ -33,15 +33,25 @@
 
 #import <UIKit/UIKit.h>
 #import "MDSpreadViewClasses.h"
+@class MDHugeADataSource;
+@class MDHugeBDataSource;
+@class MDSortableDataSource;
 
-@interface MDViewController : UIViewController <MDSpreadViewDataSource, MDSpreadViewDelegate> {
+@interface MDViewController : UIViewController {
     MDSpreadView *spreadView;
 }
-@property (retain, nonatomic) IBOutlet MDSpreadView *spreadView;
+
+@property (nonatomic, strong) IBOutlet MDSpreadView *spreadView;
+
+@property (nonatomic, strong) MDHugeADataSource *hugeA;
+@property (nonatomic, strong) MDHugeBDataSource *hugeB;
+@property (nonatomic, strong) MDSortableDataSource *sortable;
+
 - (IBAction)scrollToTop:(id)sender;
 - (IBAction)scrollToBottom:(id)sender;
 - (IBAction)scrollToLeft:(id)sender;
 - (IBAction)scrollToRight:(id)sender;
 - (IBAction)reload:(id)sender;
+- (IBAction)changeDataSource:(UISegmentedControl *)sender;
 
 @end

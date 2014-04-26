@@ -25,13 +25,16 @@
 		658BFE3A144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE32144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected.png */; };
 		658BFE3B144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 658BFE33144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected@2x.png */; };
 		65AA64E4190A1C6A009C8125 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65AA64E3190A1C6A009C8125 /* Default-568h@2x.png */; };
+		65AA64E7190B564A009C8125 /* MDHugeADataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA64E6190B564A009C8125 /* MDHugeADataSource.m */; };
+		65AA64EA190B56EA009C8125 /* MDHugeBDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA64E9190B56EA009C8125 /* MDHugeBDataSource.m */; };
+		65AA64ED190B570B009C8125 /* MDSortableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AA64EC190B570B009C8125 /* MDSortableDataSource.m */; };
 		65D8464A144A82A5005603DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D84649144A82A5005603DD /* UIKit.framework */; };
 		65D8464C144A82A5005603DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D8464B144A82A5005603DD /* Foundation.framework */; };
 		65D8464E144A82A5005603DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D8464D144A82A5005603DD /* CoreGraphics.framework */; };
 		65D84654144A82A5005603DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65D84652144A82A5005603DD /* InfoPlist.strings */; };
 		65D84656144A82A5005603DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D84655144A82A5005603DD /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		65D8465A144A82A5005603DD /* MDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D84659144A82A5005603DD /* MDAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		65D8465D144A82A5005603DD /* MDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D8465C144A82A5005603DD /* MDViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65D8465D144A82A5005603DD /* MDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D8465C144A82A5005603DD /* MDViewController.m */; };
 		65D84660144A82A5005603DD /* MDViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D8465E144A82A5005603DD /* MDViewController_iPhone.xib */; };
 		65D84663144A82A5005603DD /* MDViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D84661144A82A5005603DD /* MDViewController_iPad.xib */; };
 		65D8467E144A86DC005603DD /* MDSpreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D8467B144A86DC005603DD /* MDSpreadView.m */; };
@@ -82,6 +85,12 @@
 		658BFE32144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MDSpreadViewCornerTopRightSelected.png; sourceTree = "<group>"; };
 		658BFE33144E19B600F9A434 /* MDSpreadViewCornerTopRightSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MDSpreadViewCornerTopRightSelected@2x.png"; sourceTree = "<group>"; };
 		65AA64E3190A1C6A009C8125 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		65AA64E5190B564A009C8125 /* MDHugeADataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDHugeADataSource.h; sourceTree = "<group>"; };
+		65AA64E6190B564A009C8125 /* MDHugeADataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDHugeADataSource.m; sourceTree = "<group>"; };
+		65AA64E8190B56EA009C8125 /* MDHugeBDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDHugeBDataSource.h; sourceTree = "<group>"; };
+		65AA64E9190B56EA009C8125 /* MDHugeBDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDHugeBDataSource.m; sourceTree = "<group>"; };
+		65AA64EB190B570B009C8125 /* MDSortableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSortableDataSource.h; sourceTree = "<group>"; };
+		65AA64EC190B570B009C8125 /* MDSortableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSortableDataSource.m; sourceTree = "<group>"; };
 		65D84645144A82A5005603DD /* MDSpreadViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDSpreadViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D84649144A82A5005603DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65D8464B144A82A5005603DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -186,6 +195,12 @@
 				65D84659144A82A5005603DD /* MDAppDelegate.m */,
 				65D8465B144A82A5005603DD /* MDViewController.h */,
 				65D8465C144A82A5005603DD /* MDViewController.m */,
+				65AA64E5190B564A009C8125 /* MDHugeADataSource.h */,
+				65AA64E6190B564A009C8125 /* MDHugeADataSource.m */,
+				65AA64E8190B56EA009C8125 /* MDHugeBDataSource.h */,
+				65AA64E9190B56EA009C8125 /* MDHugeBDataSource.m */,
+				65AA64EB190B570B009C8125 /* MDSortableDataSource.h */,
+				65AA64EC190B570B009C8125 /* MDSortableDataSource.m */,
 				65D84678144A86DC005603DD /* MDSpreadView */,
 				65D8465E144A82A5005603DD /* MDViewController_iPhone.xib */,
 				65D84661144A82A5005603DD /* MDViewController_iPad.xib */,
@@ -391,11 +406,14 @@
 				65D84656144A82A5005603DD /* main.m in Sources */,
 				65D8465A144A82A5005603DD /* MDAppDelegate.m in Sources */,
 				65D8465D144A82A5005603DD /* MDViewController.m in Sources */,
+				65AA64ED190B570B009C8125 /* MDSortableDataSource.m in Sources */,
 				65D8467E144A86DC005603DD /* MDSpreadView.m in Sources */,
 				65D846BD144AA836005603DD /* MDSpreadViewCell.m in Sources */,
+				65AA64E7190B564A009C8125 /* MDHugeADataSource.m in Sources */,
 				65D846C0144AA9F7005603DD /* MDSpreadViewHeaderCell.m in Sources */,
 				65D846C7144AB887005603DD /* MDSpreadViewCellBackground.m in Sources */,
 				65D846CA144AB922005603DD /* MDSpreadViewCellRowHeaderBackground.m in Sources */,
+				65AA64EA190B56EA009C8125 /* MDHugeBDataSource.m in Sources */,
 				65D846CD144ABABC005603DD /* MDSpreadViewCellColumnHeaderBackground.m in Sources */,
 				65D846D0144ABAD4005603DD /* MDSpreadViewCellCornerHeaderBackground.m in Sources */,
 			);
