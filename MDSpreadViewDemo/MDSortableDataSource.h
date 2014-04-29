@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MDSpreadViewClasses.h"
 
-@interface MDSortableDataSource : NSObject <MDSpreadViewDataSource, MDSpreadViewDelegate>
+@interface MDSortableDataSource : NSObject <MDSpreadViewDataSource, MDSpreadViewDelegate> {
+    NSMutableArray *data;
+}
 
 @end
