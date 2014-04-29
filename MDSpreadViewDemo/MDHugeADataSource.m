@@ -25,12 +25,12 @@
 
 - (NSInteger)numberOfColumnSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 100;
+    return 10000;
 }
 
 - (NSInteger)numberOfRowSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 100;
+    return 10000;
 }
 
 #pragma mark Heights
@@ -63,7 +63,7 @@
 
 - (CGFloat)spreadView:(MDSpreadView *)aSpreadView widthForColumnHeaderInSection:(NSInteger)columnSection
 {
-    //    if (columnSection == 2) return 0; // uncomment to hide this header!
+//    if (columnSection == 2) return 0; // uncomment to hide this header!
     if (columnSection == 1) return 0;
     return MIN(110+columnSection*5, 230);
 //    return 22;

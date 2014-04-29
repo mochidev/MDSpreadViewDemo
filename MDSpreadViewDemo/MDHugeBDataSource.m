@@ -24,12 +24,12 @@
 
 - (NSInteger)numberOfColumnSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 100;
+    return 10000;
 }
 
 - (NSInteger)numberOfRowSectionsInSpreadView:(MDSpreadView *)aSpreadView
 {
-    return 100;
+    return 10000;
 }
 
 #pragma mark Heights
