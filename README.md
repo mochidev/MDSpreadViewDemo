@@ -36,7 +36,7 @@ Usage
 Simply add the
 [MDSpreadView](https://github.com/mochidev/MDSpreadView) submodule to
 your project, add `#import "MDSpreadViewClasses.h"` to the top of the files you 
-wish to use MDSpreadView in, and set the `delegate` and `dataSource` properties 
+wish to use `MDSpreadView` in, and set the `delegate` and `dataSource` properties
 of your `MDSpreadView` instance to one of your objects, much like you would do 
 for a `UITableView`.
 
@@ -67,12 +67,12 @@ Notes
 To Do
 -----
 
- - Persistant row selection
- - Better header selection
- - Column sorting
  - Programatic scrolling
  - Info Querying
  - Copy-Paste menu support
+ - Cell insertion, deletion, and reload
+ - Class registration per identifier
+ - Better animation between data set transitions
 
 Coding Style Guidelines
 -----------------------
