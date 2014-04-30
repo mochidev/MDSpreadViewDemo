@@ -24,7 +24,6 @@
                 for (int c = 0; c < 20; c++) {
                     NSMutableDictionary *row = [[NSMutableDictionary alloc] init];
                     
-                    
                     for (int d = 0; d < 5; d++) {
                         NSMutableString *string = [[NSMutableString alloc] initWithCapacity:10];
                         
@@ -32,8 +31,10 @@
                             [string appendFormat:@"%c", arc4random_uniform(26) + 'a'];
                         }
                         
-                        [row setObject:string forKey:[NSString stringWithFormat:@"column%c", d + 'a']];
+                        [row setObject:string forKey:[NSString stringWithFormat:@"column%c%c%c", a + 'a', b + 'a', d + 'a']];
                     }
+                    
+                    [row setObject:[NSString stringWithFormat:@"Row %d", c+1] forKey:[NSString stringWithFormat:@"header%c%c", a + 'a', b + 'a']];
                     
                     [columnSections addObject:row];
                 }
@@ -69,12 +70,12 @@
 
 - (id)spreadView:(MDSpreadView *)aSpreadView objectValueForRowAtIndexPath:(MDIndexPath *)rowPath forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
-    return [[[[data objectAtIndex:rowPath.section] objectAtIndex:columnPath.section] objectAtIndex:rowPath.row] objectForKey:[NSString stringWithFormat:@"column%c", (unichar)columnPath.column + 'a']];
+    return [[[[data objectAtIndex:rowPath.section] objectAtIndex:columnPath.section] objectAtIndex:rowPath.row] objectForKey:[NSString stringWithFormat:@"column%c%c%c", (unichar)rowPath.section + 'a', (unichar)columnPath.section + 'a', (unichar)columnPath.column + 'a']];
 }
 
 - (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInColumnSection:(NSInteger)section forRowAtIndexPath:(MDIndexPath *)rowPath
 {
-    return [NSString stringWithFormat:@"Row %ld", rowPath.row+1];
+    return [[[[data objectAtIndex:rowPath.section] objectAtIndex:section] objectAtIndex:rowPath.row] objectForKey:[NSString stringWithFormat:@"header%c%c", (unichar)rowPath.section + 'a', (unichar)section + 'a']];
 }
 
 - (id)spreadView:(MDSpreadView *)aSpreadView titleForHeaderInRowSection:(NSInteger)section forColumnAtIndexPath:(MDIndexPath *)columnPath
@@ -94,11 +95,14 @@
 
 #pragma mark - Sorting
 
+- (MDSortDescriptor *)spreadView:(MDSpreadView *)aSpreadView sortDescriptorPrototypeForHeaderInRowSection:(NSInteger)rowSection forColumnSection:(NSInteger)columnSection
+{
+    return [MDSortDescriptor sortDescriptorWithKey:[NSString stringWithFormat:@"header%c%c", (unichar)rowSection + 'a', (unichar)columnSection + 'a'] ascending:YES selector:@selector(localizedStandardCompare:) selectsWholeSpreadView:NO];
+}
 
-//- (MDSortDescriptor *)spreadView:(MDSpreadView *)aSpreadView sortDescriptorPrototypeForHeaderInRowSection:(NSInteger)rowSection forColumnSection:(NSInteger)columnSection;
 - (MDSortDescriptor *)spreadView:(MDSpreadView *)aSpreadView sortDescriptorPrototypeForHeaderInRowSection:(NSInteger)section forColumnAtIndexPath:(MDIndexPath *)columnPath
 {
-    return [MDSortDescriptor sortDescriptorWithKey:[NSString stringWithFormat:@"column%c", (unichar)columnPath.column + 'a'] ascending:YES selectsWholeSpreadView:NO];
+    return [MDSortDescriptor sortDescriptorWithKey:[NSString stringWithFormat:@"column%c%c%c", (unichar)section + 'a', (unichar)columnPath.section + 'a', (unichar)columnPath.column + 'a'] ascending:YES selectsWholeSpreadView:NO];
 }
 
 - (MDSortDescriptor *)spreadView:(MDSpreadView *)aSpreadView sortDescriptorPrototypeForHeaderInColumnSection:(NSInteger)section forRowAtIndexPath:(MDIndexPath *)rowPath
